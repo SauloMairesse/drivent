@@ -11,13 +11,7 @@ async function getAddressFromCEP(cep: string) {
     throw notFoundError();
   }
 
-  return {
-    logradouro: address.logradouro,
-    complemento: address.complemento,
-    bairro: address.bairro,
-    cidade: address.localidade,
-    uf: address.uf
-  };
+  return address;
 }
 
 async function getOneWithAddressByUserId(userId: number): Promise<GetOneWithAddressByUserIdResult> {
