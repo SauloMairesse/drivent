@@ -9,6 +9,7 @@ enrollmentsRouter
   .get("/cep", getAddressFromCEP)
   .all("/*", authenticateToken)
   .get("/", getEnrollmentByUser)
-  .post("/", validateBody(createEnrollmentSchema), postCreateOrUpdateEnrollment);
+  .post("/", validateBody(createEnrollmentSchema), postCreateOrUpdateEnrollment)
+  .get("/enrollments/cep", getAddressFromCEP);
 
 export { enrollmentsRouter };
